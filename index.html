@@ -1,0 +1,185 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="Description" content="Demo Windows Phone right from your iPhone or Android device – no app required" />
+<meta name="Keywords" content="Windows Phone, WindowsPhone, windowsphone, Windows Phone 7, Windows Phone 7.5, demo, mobile, mobi, People Hub, Put People First, iPhone, Android, mobile phone, phone" />
+<title>Windows Phone Demo</title>
+<!-- the line below is required for access to the appMobi JS library -->
+<script type="text/javascript" charset="utf-8" src="http://localhost:58888/_appMobi/appmobi.js"></script>
+
+<script type="text/javascript" language="javascript">
+        // This event handler is fired once the AppMobi libraries are ready
+        function onDeviceReady() {
+            //use AppMobi viewport to handle device resolution differences if you want
+            //AppMobi.display.useViewport(768,1024);
+
+            //hide splash screen now that our app is ready to run
+            AppMobi.device.hideSplashScreen();
+        }
+
+        //initial event handler to detect when appMobi is ready to roll
+        document.addEventListener("appMobi.device.ready",onDeviceReady,false);
+</script> 
+<link rel="stylesheet" href="style-min.css?rc1" type="text/css" media="all" />
+<script type="text/javascript" src="js/wp-min.js?rc3.5"></script>
+<SCRIPT type="text/javascript">
+<!--
+	function dcsMultiTrack(){}
+//-->
+</SCRIPT>
+</head>
+<body style="display:none;" id="MainBody">
+
+<div id="wrongOrientation"></div>
+
+<div id="loading">
+	<h1 id="winphoneLogo">Windows Phone</h1>
+	<p>Welcome... tap <strong>Start demo</strong> and see how Windows Phone makes it easier to connect and share.</p>
+	<h2>Once inside the demo, tap any tile to begin and follow the blue dot.</h2>
+	<div id="welcome-tap"><div id="hotspot"><div></div></div><br />
+	TAP</div>
+	<div id="welcome-swipe"><div><div></div></div><br />
+	SWIPE</div>
+
+	<div id="dots"><span></span><span></span><span></span><span></span><span></span></div>
+	
+	<div id="welcomeButton">loading...</div>
+
+</div>
+
+<div id="device">
+
+	<div id="screen">
+
+		<div id="home">
+			<div id="tiles">
+				<div id="tile-messaging" class="tile">
+					<div><h2>Messaging</h2><p>3</p></div>
+				</div>
+
+				<div id="tile-people" class="tile grid">
+					<div>
+						<h2>People</h2>
+						<ul><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li></ul>
+					</div>
+				</div>
+   				<div id="tile-localscout" class="tile">
+					<div><h2>Local Scout</h2></div>
+				</div>
+				<div id="tile-inbox" class="tile">
+					<div><h2>Outlook</h2><p>2</p></div>
+				</div>
+
+				<div id="tile-calendar" class="tile wide">
+					<div><h2>Calendar</h2><span id="calToday"></span><span id="calEvent">Daily status<br />Building 600, Conf Room A Tomorrow: 9:00 AM – 11:00 AM</span></div>
+				</div>
+
+				<div id="tile-group" class="tile group">
+					<div>
+						<h2>Family</h2>
+						<ul>
+							<li><img src="images/people/michelle_alexander@2x.jpg" width="114" height="114" alt="family" class="offset0" /></li>
+							<li><img src="images/people/michelle_alexander@2x.jpg" width="114" height="114" alt="family" class="offset1" /></li>
+							<li><img src="images/people/michelle_alexander@2x.jpg" width="114" height="114" alt="family" class="offset2" /></li>
+						</ul>
+					</div>
+				</div>
+				<div id="tile-phone" class="tile">
+					<div><h2>Phone</h2></div>
+				</div>
+
+				<div id="tile-pictures" class="tile wide">
+					<div><h2>Pictures</h2></div>
+				</div>
+			</div>
+
+			<div id="sideIcons" class="hidden">
+				<div id="actionProgramsList" class="actionIcons"></div>
+				<div id="sideActionSearch" class="actionIcons"></div>
+			</div>
+
+			<div id="programsList">
+				<ul>
+					<li class="programAlarms">Alarms</li>
+					<li class="programCalculator">Calculator</li>
+					<li class="programCalendar">Calendar</li>
+					<li class="programCamera">Camera</li>
+					<li class="programGames">Games</li>
+					<li class="programIE">Internet Explorer</li>
+					<li class="programLocalScout">Local Scout</li>
+					<li class="programMaps">Maps</li>
+					<li class="programMarketplace">Marketplace</li>
+					<li class="programMessaging">Messaging</li>
+					<li class="programMusicVideo">Music+Videos</li>
+					<li class="programOffice">Office</li>
+					<li class="programPeople">People</li>
+					<li class="programPhone">Phone</li>
+					<li class="programPictures">Pictures</li>
+					<li class="programSettings">Settings</li>
+				</ul>
+			</div>
+		</div><!-- home -->
+
+	</div><!-- screen -->
+
+	<div id="swipe"><div></div></div>
+	
+	<div id="hardkeys" class="hidden">
+		<ul>
+			<li id="buttonBack">back</li>
+			<li id="buttonHome">home</li>
+			<li id="buttonSearch">search</li>
+		</ul>
+	</div>
+
+	<div id="actionbar" class="hidden">
+		<ul>
+			<li id="actionSendComment"><span></span>send</li>
+			<li id="actionLike"><span></span>like</li>
+			<li id="actionPin"><span></span>pin</li>
+			<li id="actionLink"><span></span>link</li>
+			<li id="actionEdit"><span></span>edit</li>
+			<li id="actionClip"><span></span>attach</li>
+			<li id="actionMic"><span></span>speak</li>
+			<li id="actionSwitch"><span></span>switch</li>
+			<li id="actionToday"><span></span>today</li>
+			<li id="actionAdd"><span></span>add</li>
+			<li id="actionSelect"><span></span>select</li>
+			<li id="actionSync"><span></span>sync</li>
+			<li id="actionSearch"><span></span>search</li>
+			<li id="actionMonth"><span></span>month</li>
+			<li id="actionReply"><span></span>respond</li>
+			<li id="actionDelete"><span></span>delete</li>
+			<li id="actionPrev"><span></span>newer</li>
+			<li id="actionNext"><span></span>older</li>
+			<li id="actionUpload"><span></span>upload</li>
+			<li id="actionTag"><span></span>tag</li>
+			<li id="actionCancel"><span></span>cancel</li>
+		</ul>
+
+		<div id="actionEllipsis" class="actionIcons">ellipsis</div>
+		
+		<ol id="actionbarOptions"></ol>
+		
+	</div>
+
+</div><!-- device -->
+
+
+
+<script type="text/javascript">
+//<![CDATA[
+    WP.init();
+//]]>
+</script>
+
+<!--img height="1" width="1" src="http://view.atdmt.com/action/WinPhone_FY12_Mango_MobileDemo_StartPage" alt=""  id="AtlasTag"/ -->
+
+
+</body>
+</html>
